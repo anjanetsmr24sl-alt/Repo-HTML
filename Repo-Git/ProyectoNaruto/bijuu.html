@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+    <title>Proyecto Naruto</title>
+</head>
+<body>
+    <div class="general">
+        <div class="pantallaCarga" id="pantallaCarga">
+            <img src="imagenes/cargando.svg"/>
+            <b><p>Cargando </p></b>
+        </div>
+        <div class="pantallaNormal" id="pantallaNormal" style="display: none;">
+            <div class="generalMenu">
+                <header>
+                    <div class="menu">
+                        <div class="logoMenu">
+                            <img src="imagenes/logoNaruto.png" width="300">
+                        </div>
+                        <div class="navMenu">
+                            <nav>
+                                <a href="index.html">
+                                    <img src="imagenes/hoja.png" width="50"/>
+                                    <b><p>Inicio</p></b>
+                                </a>
+                                <a href="bijuu.html">
+                                    <img src="imagenes/kunai.png" width="50"/>
+                                    <b><p>Bijuus</p></b>
+                                </a>
+                                <a href="akatsuki.html">
+                                    <img src="imagenes/akatsuki.png" width="90"/>
+                                    <b><p>Akatsuki</p></b>
+                                </a>
+                            </nav>
+                        </div>
+                        <div class="opcionesMenu">
+                            <form>
+                                <select>
+                                    <option>es</option>
+                                    <option>en</option>
+                                    <option>jp</option>
+                                    <option>pt</option>
+                                    <option>fr</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+                <div class="inicioBijuu">
+                    <div id="menuBijuu">
+                        <div class="tituloBijuu">
+                            <img src="imagenes/tituloBijuu.png" width="300"/>
+                        </div>
+                        <div class="botonesCarrusel">
+                            <button id="prev">◀</button>
+                            <button id="next">▶</button>
+                        </div>
+                        <div class="textoBijuu" id="textoBijuu"></div>
+                        <div class="tarjetasBijuu">
+                            <div class="tarjetaBijuuBorde">
+                                <img src="imagenes/shukaku.jpg" width="400" />
+                            </div>
+                            <div class="tarjetaBijuuBorde">
+                                <img src="imagenes/Matatabi.jpg" width="400" />
+                            </div>
+                            <div class="tarjetaBijuuBorde">
+                                <img src="imagenes/Isobu.jpg" width="400" />
+                            </div>
+                            <div class="tarjetaBijuuBorde">
+                                <img src="imagenes/Goku.jpg" width="400" />
+                            </div>
+                            <div class="tarjetaBijuuBorde">
+                                <img src="imagenes/Kokuo.jpg" width="400" />
+                            </div>
+                            <div class="tarjetaBijuuBorde">
+                                <img src="imagenes/Saiken.jpg" width="400" />
+                            </div>
+                            <div class="tarjetaBijuuBorde">
+                                <img src="imagenes/Chomei.jpg" width="400" />
+                            </div>
+                            <div class="tarjetaBijuuBorde">
+                                <img src="imagenes/Gyuki.jpg" width="400" />
+                            </div>
+                            <div class="tarjetaBijuuBorde">
+                                <img src="imagenes/Kurama.jpg" width="400" />
+                            </div>
+                            <button class="infoButton" id="infoButton">
+                                Más Información <img src="imagenes/kunai.png" width="20" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="inicioBijuu">
+                        <!-- Shukaku -->
+                        <div id="detalleShukaku" style="display: none;">
+                            <div class="tituloBijuu">
+                                <img src="imagenes/shukakuTexto.png" width="300"/>
+                            </div>
+                            <div class="detalleBijuu">
+                                <button class="cerrarDetalle">X</button>
+                                <h2>Shukaku</h2>
+                                <p>Shukaku es el Biju de Una Cola de Elemento Viento, también conocido en algunos sitios del mundo ninja como "La Encarnación de la Arena" o el Tanuki Monstruo. Su apariencia está inspirada en el mapache japonés, solo que aquí es representado con una forma corpulenta del color de la arena, mientras incorpora líneas por todo su cuerpo de color azul y ojos negros con iris amarillo.
+                                Por otro lado, su personalidad es bastante ilógica, pero a la vez inteligente y es considerado como el más débil porque cuenta con la menos cantidad de cola. A pesar de eso, aunque no sea el de la mejor ofensiva, es el único que cuenta con una defensa casi impenetrable. Anteriormente, Shukaku se encontraba sellado en el sacerdote Bunpuku, pero posteriormente fue heredado por Gaara, el portador más reciente y el Quinto Kazekage de Sunagakure (Aldea Oculta de la Arena).</p>
+                                <img src="imagenes/cola1.png" width="300"/>
+                            </div>
+                        </div>
+
+                        <!-- Matatabi -->
+                        <div id="detalleMatatabi" style="display: none;">
+                            <div class="tituloBijuu">
+                                <img src="imagenes/matatabiTexto.png" width="300"/>
+                            </div>
+                            <div class="detalleBijuu">
+                                <button class="cerrarDetalle">X</button>
+                                <h2>Matatabi</h2>
+                                <p>Matatabi fue sellado en Yugito Nii, una joven ninja de Kumogakure (Aldea Oculta de las Nubes) que tras un forzado entrenamiento llegó a controlar su transformación en Bestia con Cola a voluntad propia desde muy poca edad. El Biju de Dos Colas es de Elemento Fuego, siendo similar a un gato manifestado como espíritu con reflejos negros y tiene heterocromía en los ojos. En cuanto a sus habilidades características, se encuentra la capacidad de lanzar bolas grandes de fuego.</p>
+                                <img src="imagenes/cola2.png" width="300"/>
+                            </div>
+                        </div>
+
+                        <!-- Isobu -->
+                        <div id="detalleIsobu" style="display: none;">
+                            <div class="tituloBijuu">
+                                <img src="imagenes/isobuTexto.png" width="300"/>
+                            </div>
+                            <div class="detalleBijuu">
+                                <button class="cerrarDetalle">X</button>
+                                <h2>Isobu</h2>
+                                <p>Isobu es el Biju de Tres Colas que tiene forma de Tortuga Gigante, con una gran cobertura de armadura gris, colas similares a la de los camarones y un solo ojo. En un principio, la bestia fue sellada en Rin Nohara de Konoha (Aldea Oculta de la Hoja), tras su fallecimiento, Yagura Karatachi de se convirtió en el jinchuriki, mientras que también era el Cuarto Mizukage de Kirigakure (Aldea Oculta de la Niebla).
+                                A diferencia de otros Biju, este no cuenta con una personalidad tan agresiva y odiosa, sino que es más tímido y amigable. Isobu es de Elemento Agua y tiene una increíble capacidad para batallar en el mar.</p>
+                                <img src="imagenes/cola3.png" width="300"/>
+                            </div>
+                        </div>
+                        <!-- Goku -->
+                        <div id="detalleGoku" style="display: none;">
+                            <div class="tituloBijuu">
+                                <img src="imagenes/gokuTexto.png" width="300"/>
+                            </div>
+                            <div class="detalleBijuu">
+                                <button class="cerrarDetalle">X</button>
+                                <h2>Goku</h2>
+                                <p>Sí, tal cual como Son Goku de Dragon Ball, su nombre es una referencia a Dragon Ball debido a que el creador de Naruto es fan del anime. De hecho, su forma animal está basada en un gorila y el jinchuriki se llama "Roshi", otra referencia a dicha franquicia. El Biju de Cuatro Colas también es conocido como "Rey de los Monos Sabio", su pelaje es de color rojo y su piel de color verde muy claro, así mismo, sus ojos son amarillos y cuenta con dos cuernos en la parte frontal de su cabeza.
+                                Son Gokū fue sellado en Roshi, un anciano de Iwagakure (Aldea Oculta entre las Rocas) con gran destreza en el Elemento Fusión, aunque fue derrotado por Kisame. Además, la Bestia de Cuatro Colas tiene las habilidades de Llamarada de Fuego Verde, el uso de Taijutsu y una gran fuerza física en comparación con otros Biju.</p>
+                                <img src="imagenes/cola4.jpg" width="300"/>
+                            </div>
+                        </div>
+
+                        <!-- Kokuo -->
+                        <div id="detalleKokuo" style="display: none;">
+                            <div class="tituloBijuu">
+                                <img src="imagenes/koukoTexto.png" width="300"/>
+                            </div>
+                            <div class="detalleBijuu">
+                                <button class="cerrarDetalle">X</button>
+                                <h2>Kokuo</h2>
+                                <p>La extraña apariencia de Kokuō parece una combinación entre el cuerpo de un caballo y la cabeza de un delfín con cinco cuernos, aunque también es completamente de color blanco con detalles beige. Este Biju veloz y fuerte, fue sellado en Han, un soldado de Iwagakure que participó en la Tercera Guerra Mundial Shinobi y fue reconocido por su habilidad con el ninjutsu de Elemento Ebullición.</p>
+                                <img src="imagenes/cola5.png" width="300"/>
+                            </div>
+                        </div>
+
+                        <!-- Saiken -->
+                        <div id="detalleSaiken" style="display: none;">
+                            <div class="tituloBijuu">
+                                <img src="imagenes/saikenTexto.png" width="300"/>
+                            </div>
+                            <div class="detalleBijuu">
+                                <button class="cerrarDetalle">X</button>
+                                <h2>Saiken</h2>
+                                <p>El Biju de Seis Colas se muestra como una gran babosa de color blanco con ojos similares a los de un caracol. Este tiene una extraña manera de resistir ataques potentes de Kinjutsu y también adquiere la capacidad de comunicarse telepáticamente con otras bestias. Debido a su composición, puede generar tanto líquido, como gas tóxico, siendo capaz de emplear el Campo de Baba Pegajosa y Burbujas de Jabón.
+                                Saiken fue sellado en Utakata de Kirigakure, quien se convirtió en un ninja renegado tras asesinar a su maestro Harusame al transformarse en la Bestia de Seis Colas en un intento de despojarse del Biju.</p>
+                                <img src="imagenes/cola6.png" width="300"/>
+                            </div>
+                        </div>
+
+                        <!-- Chomei -->
+                        <div id="detalleChomei" style="display: none;">
+                            <div class="tituloBijuu">
+                                <img src="imagenes/chomeiTexto.png" width="300"/>
+                            </div>
+                            <div class="detalleBijuu">
+                                <button class="cerrarDetalle">X</button>
+                                <h2>Chomei</h2>
+                                <p>El jinchuriki de Chōmei es una kunoichi de Takigakure (Aldea Oculta de la Cascada) llamada Fū, una experta en los ataques sorpresa y comunicación a distancia. Con respecto al diseño del Biju de Siete Colas, está basado en el escarabajo rinoceronte japonés, donde sus alas representan cada una de sus alas, mientras que cuenta con una mandíbula en forma de tenaza y ojos naranja brillantes en forma de casco de caballería.</p>
+                                <img src="imagenes/cola7.png" width="300"/>
+                            </div>
+                        </div>
+
+                        <!-- Gyuki -->
+                        <div id="detalleGyuki" style="display: none;">
+                            <div class="tituloBijuu">
+                                <img src="imagenes/gyukiTexto.png" width="300"/>
+                            </div>
+                            <div class="detalleBijuu">
+                                <button class="cerrarDetalle">X</button>
+                                <h2>Gyuki</h2>
+                                <p>Killer B es uno de los personajes más populares del anime por su interesante forma de hablar rapeando y momentos graciosos, pero también por ser el mentor de Naruto y jinchuriki del Gyuki en Kumogakure. Este Biju de Ocho Colas tiene una composición corporal mitad pulpo y mitad buey.
+                                Además, es considerado como la segunda Bestia con Colas más poderosa de todas, ya que tiene una gran experiecia en combate, donde algunas de sus habilidades más llamativas son el Remolino de Viento, contención de Bola de Bestia con Cola, resistencia al Amaterasu. Gyūki es uno de los pocos que mantiene una muy buena relación con su jinchuriki.</p>
+                                <img src="imagenes/cola8.png" width="300"/>
+                            </div>
+                        </div>
+
+                        <!-- Kurama -->
+                        <div id="detalleKurama" style="display: none;">
+                            <div class="tituloBijuu">
+                                <img src="imagenes/kuramaTexto.png" width="300"/>
+                            </div>
+                            <div class="detalleBijuu">
+                                <button class="cerrarDetalle">X</button>
+                                <h2>Kurama</h2>
+                                <p>Aunque es conocido por muchos como "Kyubi", el nombre real del Biju de Nueve Colas es Kurama. De todas las Bestias con Cola, esta es la más agresiva y detestable por su manera de pensar siempre en sí mismo o para su beneficio, aunque con el tiempo cambia al comunicarse con Naruto en sistuaciones complicadas y lo ayuda.
+                                El diseño de Kurama está inspirado en un zorro con un cuerpo semihumano y el Kitsune de la mitología japonesa. Este es considerado como el más poderoso de todos los Biju y el más difícil de controlar. No obstante, después de todo no puede haber un Naruto sin Kurama y un Kurama sin Naruto, ya que ambos se necesitan así mismos para mantenerse con vida.</p>
+                                <img src="imagenes/cola9.png" width="300"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer">
+                <div class="footer_content">
+                    <div class="footer_image">
+                        <img src="imagenes/mejorProyecto.png" alt="Imagen izquierda">
+                    </div>
+                    <div class="vertical_line"></div>
+
+                    <div class="footer_iframe">
+                        <iframe src="https://img.oasgames.com/upload/1509532152/waidai-footer.html" 
+                        allowtransparency="true" frameborder="0" style="width: 100%; height: 120px;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

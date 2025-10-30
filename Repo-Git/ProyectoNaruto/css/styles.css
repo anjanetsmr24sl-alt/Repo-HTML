@@ -1,0 +1,467 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.general {
+    min-height: 100vh;      
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(233, 127, 43);
+}
+
+.pantallaCarga,
+.pantallaNormal {
+    flex: 1;               
+}
+
+
+
+.pantallaCarga{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    flex-direction: column;
+}
+
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pantallaCarga b p {
+    font-size: 24px;
+    position: relative;
+}
+
+
+.pantallaCarga b p::after {
+    content: '';
+    display: inline-block;
+    width: 1ch;
+    text-align: left;
+    animation: puntos 1s steps(3, end) infinite;
+}
+
+@keyframes puntos {
+    0% { content: ''; }
+    33% { content: '.'; }
+    66% { content: '..'; }
+    100% { content: '...'; }
+}
+
+.pantallaCarga img{
+    animation: girar 2s linear infinite;
+}
+
+header{
+    width: 100%;
+}
+
+.generalMenu{
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.logoMenu{
+    cursor: pointer;
+}
+
+.navMenu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navMenu nav{
+    display: flex;
+    margin-right: 200px;
+}
+
+.navMenu a {
+    margin-left: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navMenu a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+
+
+.opcionesMenu {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+
+
+.opcionesMenu select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 120px;
+    padding: 10px 40px 10px 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+
+
+    background: linear-gradient(to right, black 0%, black 80%, white 80%, white 100%);
+    color: white;
+    position: relative;
+}
+
+.opcionesMenu::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.opcionesMenu select option {
+    background-color: black;
+    color: white;
+}
+
+.inicioBijuu{
+    margin-top: 100px;
+}
+
+.tituloBijuu{
+    margin-left: 25%;
+}
+
+.tarjetasBijuu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+
+.tarjetaBijuuBorde {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s, opacity 0.5s, z-index 0s;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tarjetaBijuuBorde img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+
+.tarjetaBijuuBorde.active img {
+    width: 300px;
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.botonesCarrusel {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.botonesCarrusel button {
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    transition: background 0.3s;
+}
+
+.botonesCarrusel button:hover {
+    background-color: rgba(0,0,0,0.9);
+}
+
+.nombreBijuu {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px black;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.tarjetaBijuuBorde.active .nombreBijuu {
+    opacity: 1;
+}
+
+.textoBijuu {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.infoButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px auto 0 auto;
+    padding: 8px 16px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+
+    position: relative;
+    z-index: 100;
+    pointer-events: auto;
+
+    margin-top: 200px;
+}
+
+.infoButton img {
+    display: inline-block;
+}
+
+.infoButton:hover {
+    background-color: rgba(255,255,255,0.2);
+    border-color: yellow;
+}
+
+
+.detalleBijuu {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.detalleBijuu h2 {
+    margin-top: 0;
+}
+
+.cerrarDetalle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+/*css index*/
+article{
+    border: 0;
+    margin: 0;
+    padding: 50px;
+}
+
+.imgNaruto{
+    display: block;
+    margin: 0 auto;
+     max-width: 20%;
+ }
+
+
+/*css index*/
+.footer {
+  background: #000;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+    margin-top: auto; /* Esto empuja el footer al final */
+
+}
+
+.footer_content {
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+  gap: 20px;
+}
+
+.footer_image img {
+  height: 80px;
+}
+
+.vertical_line {
+  width: 2px;
+  background: #fff;
+  height: 60px;
+  margin: 0 20px;
+  position: relative;
+}
+
+.vertical_line::before,
+.vertical_line::after {
+  content: '';
+  display: block;
+  height: 10px;
+  background: #000;
+}
+
+.footer_iframe {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.footer_iframe iframe {
+  display: block;
+  width: 100%;
+  height: 100px;
+  border: none;
+}
+
+.indexInicio{
+    margin-left: 30px;
+}
+
+.inicioAkatsuki {
+    text-align: center;
+    padding: 40px 20px;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%);
+}
+
+.tituloAkatsuki img {
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 15px #e63946);
+}
+
+
+/* =============================
+   TARJETAS AKATSUKI
+============================= */
+.tarjetasAkatsuki {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+
+.tarjetaAkatsukiBorde {
+    border: 2px solid #e63946;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjetaAkatsukiBorde:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(230, 57, 70, 0.9);
+}
+
+.tarjetaAkatsukiBorde img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    
+}
+
+/* =============================
+   DESCRIPCIÓN AKATSUKI
+============================= */
+.descripcionAkatsuki {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(15, 15, 15, 0.9);
+    border: 1px solid #e63946;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 25px rgba(230, 57, 70, 0.5);
+    text-align: left;
+    line-height: 1.6em;
+    color: aliceblue;
+}
+
+.descripcionAkatsuki h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #e63946;
+    text-shadow: 0 0 10px #e63946;
+}
+
+.descripcionAkatsuki ul {
+    list-style: none;
+    padding: 0;
+}
+
+.descripcionAkatsuki li {
+    margin: 10px 0;
+    padding-left: 10px;
+    border-left: 3px solid #e63946;
+}
+
+.descripcionAkatsuki b {
+    color: #e63946;
+}
+
+
